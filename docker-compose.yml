@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    container_name: ${CONTAINER_NAME}
+    image: ${IMAGE_NAME}
+    command: ["python", "main.py"]
+    volumes:
+      - ./data:/home/app_user/data
+    stdin_open: true
+    tty: true
